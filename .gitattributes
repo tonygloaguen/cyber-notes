@@ -9,18 +9,17 @@
 *.sh  text eol=lf
 
 # Markdown / config
-*.md  text eol=lf
-*.yml text eol=lf
+*.md   text eol=lf
+*.yml  text eol=lf
 *.yaml text eol=lf
 *.json text eol=lf
 
 # Binary files
-*.png binary
-*.jpg binary
+*.png  binary
+*.jpg  binary
 *.jpeg binary
-*.gif binary
-*.pdf binary
+*.gif  binary
+*.pdf  binary
 *.docx binary
 *.xlsx binary
 *.pptx binary
-"@ | Set-Content -Path ".gitattributes" -Encoding UTF8
