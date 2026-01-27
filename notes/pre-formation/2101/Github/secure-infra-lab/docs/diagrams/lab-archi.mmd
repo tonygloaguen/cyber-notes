@@ -1,0 +1,23 @@
+flowchart TB
+  Host[PC Hôte Windows] --> VB[VirtualBox]
+
+  subgraph INTNET["Réseau interne : intnet-lab (Adapter 1)\n192.168.100.0/24"]
+    U1[Ubuntu #1\nSSH: 2223 -> 22\nIP intnet: 192.168.100.11] --- U2[Ubuntu #2\nSSH: 2224 -> 22\nIP intnet: 192.168.100.12]
+    U1 --- W1[Windows Server\nRDP: 3390 -> 3389\nIP intnet: 192.168.100.10]
+    U2 --- W1
+  end
+
+  VB --> U1
+  VB --> U2
+  VB --> W1
+
+  subgraph NAT["NAT (Adapter 2)\nRègles Port Forward (Host IP vide)"]
+    Internet[(Internet)]
+  end
+
+  U1 --> Internet
+  U2 --> Internet
+  W1 --> Internet
+
+  Host -. "SSH 127.0.0.1:2223/2224" .-> U1
+  Host -. "RDP 127.0.0.1:3390" .-> W1

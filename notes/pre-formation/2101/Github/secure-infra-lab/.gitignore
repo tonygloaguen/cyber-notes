@@ -1,0 +1,13 @@
+# VirtualBox / VMs
+*.vdi
+*.vmdk
+*.vbox
+*.vbox-prev
+*.ovf
+
+# Snapshots / exports
+*.iso
+*.bak
+
+# Misc
+*.tmp
