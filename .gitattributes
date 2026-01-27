@@ -1,0 +1,14 @@
+@'
+# Normalise les fins de ligne
+* text=auto
+
+# Scripts
+*.sh text eol=lf
+*.ps1 text eol=crlf
+
+# Markdown
+*.md text eol=lf
+'@ | Set-Content -Path ".gitattributes" -Encoding UTF8
+
+git add .gitattributes
+git commit -m "chore: add gitattributes for line endings"

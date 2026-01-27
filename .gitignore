@@ -1,0 +1,16 @@
+@'
+# Office temp files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# Large local references (keep repo light)
+assets/references/
+
+# OS junk
+Thumbs.db
+.DS_Store
+
+# Prevent nested repos
+**/.git/
+'@ | Set-Content -Path ".gitignore" -Encoding UTF8
