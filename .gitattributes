@@ -1,14 +1,26 @@
-@'
-# Normalise les fins de ligne
-* text=auto
+@"
+# Normalize text files
+* text=auto eol=lf
 
-# Scripts
-*.sh text eol=lf
+# Windows PowerShell scripts
 *.ps1 text eol=crlf
 
-# Markdown
-*.md text eol=lf
-'@ | Set-Content -Path ".gitattributes" -Encoding UTF8
+# Shell scripts
+*.sh  text eol=lf
 
-git add .gitattributes
-git commit -m "chore: add gitattributes for line endings"
+# Markdown / config
+*.md  text eol=lf
+*.yml text eol=lf
+*.yaml text eol=lf
+*.json text eol=lf
+
+# Binary files
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.pdf binary
+*.docx binary
+*.xlsx binary
+*.pptx binary
+"@ | Set-Content -Path ".gitattributes" -Encoding UTF8
