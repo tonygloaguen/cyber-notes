@@ -1,3 +1,0 @@
-environment:
-  - GRAFANA_URL=${GRAFANA_URL}
-  - GRAFANA_TOKEN=${GRAFANA_TOKEN}
