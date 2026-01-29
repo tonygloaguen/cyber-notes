@@ -1,0 +1,14 @@
+.env
+*.env
+secrets/
+# --- bruit local / projets annexes ---
+Code/
+cheatsheets/db/
+cheatsheets/linux/
+planning_prepa_virtualbox_grafana_*.xlsx
+
+# notes pré-formation (si tu ne veux pas versionner ces exports ici)
+notes/pre-formation/**/Autres/*.docx
+notes/pre-formation/**/Autres/*.pptx
+notes/pre-formation/**/cours/*.docx
+
